@@ -1,6 +1,6 @@
 const express =  require('express')
 const bodyparser = require('body-parser')
-const cors = require('cors')
+
 
 const InitiateDb = require('./config/db')
 const userroutes = require('./routes/userrouters')
@@ -9,6 +9,7 @@ const PORT =process.env.PORT || 3030
 
 var app = express()
 InitiateDb()
+const cors = require('cors')
 
 app.use(express.json())
 app.use(cors())
