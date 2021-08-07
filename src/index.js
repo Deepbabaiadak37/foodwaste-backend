@@ -5,7 +5,7 @@ const cors = require('cors')
 const InitiateDb = require('./config/db')
 const userroutes = require('./routes/userrouters')
 
-const PORT = 3030
+const PORT =process.env.PORT || 3030
 
 var app = express()
 InitiateDb()
