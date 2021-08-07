@@ -14,6 +14,10 @@ app.use(bodyparser.json())
 app.use(cors())
 app.use('/images',express.static('uploads'))
 
+app.get('/test',(req,res)=>{
+    res.send("hellow");
+})
+
 app.use('/userroutes',userroutes)
 
 app.listen(PORT,(req,res)=>{
