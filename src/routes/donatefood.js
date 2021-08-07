@@ -25,7 +25,7 @@ router.post('/',upload.single('image'), async(req, res) => {
             posted_by: req.body.posted_by,
             max_people: req.body.max_people,
             city:req.body.city,
-            imageUrl: 'http://127.0.0.1:3030/images/' + req.file.originalname,
+            imageUrl: 'https://foodwaste-backend.herokuapp.com/images/' + req.file.originalname,
             expirationDate:new Date(Date.now() + (parseFloat(req.body.hour) * 3600 * 1000))
         })
         await newfood.save().then(()=>{
